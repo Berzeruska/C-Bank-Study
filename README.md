@@ -1,27 +1,31 @@
-# Estudo de Sistema Bancário em Linguagem C 🏦
+# Sistema Bancário em C (v2.0) - Seguro e Modular 🏦🔐
 
-Este repositório contém um código simples de um sistema bancário desenvolvido durante meus estudos da **Linguagem C**. O objetivo principal foi consolidar conhecimentos fundamentais de programação estruturada.
+Este projeto é uma evolução do meu estudo de programação estruturada em **Linguagem C**. Nesta versão v2.0, o foco principal foi sair do básico e aplicar conceitos reais de engenharia de software: **segurança de dados, tratamento de exceções, gestão de memória com ponteiros e modularidade**.
 
 
 
-## 🧠 Conceitos Estudados
+## 🚀 O que há de novo nesta versão?
 
-Neste projeto, apliquei e documentei os seguintes tópicos:
+* **Modularização (Clean Code):** A função `main` agora atua apenas como um controlador (menu). Toda a regra de negócio foi dividida em funções especialistas (`realizar_saque`, `realizar_deposito`, etc.).
+* **Uso de Ponteiros (`*` e `&`):** Implementação de passagem de parâmetros por referência. As funções de transação alteram o saldo diretamente no endereço de memória original, evitando o uso de variáveis globais perigosas.
+* **Tratamento de Exceções (Input Seguro):** Criação da função `limpar_buffer()` para evitar loops infinitos caso o usuário digite letras (char) em vez de números (int/double).
+* **Regras de Negócio Rígidas:** Bloqueio de valores negativos para saques e depósitos, impedindo fraudes matemáticas no sistema.
+* **Interface Visual:** Adição de ASCII Art para melhorar a experiência do usuário no terminal.
 
-* **Tipos de Dados:** Uso de `double` para precisão financeira e `int` para controle de menu.
-* **Entrada e Saída:** Manipulação de dados com `scanf` e formatação de saída com `printf` (usando `%.2f` para moedas).
-* **Estruturas de Repetição:** Uso do laço `while(1)` para manter o sistema rodando e `break` para encerrar.
-* **Estruturas Condicionais:** Implementação de lógica de decisão com `if/else` e o seletor `switch/case`.
-* **Operadores Aritméticos:** Uso de atribuição composta (`+=` e `-=`) para atualização de saldo.
+## 🧠 Conceitos e Sintaxe Aplicados
 
-## 🚀 Como Executar
+* Manipulação de endereços de memória.
+* Prevenção de *Buffer Overflow* / Falhas no `scanf`.
+* Estruturas de controle (`switch/case`, `while`, `if/else`).
+* Escopo de variáveis (locais vs. ponteiros).
 
-Para rodar este programa, você precisará de um compilador de C (como o GCC).
+## 🛠️ Como Executar
 
-1. Clone o repositório:
+Para testar o sistema, você precisará de um compilador C (como o GCC) instalado na sua máquina.
+
+1. Clone este repositório:
    ```bash
-   git clone [https://github.com/SEU_USUARIO/NOME_DO_REPO.git](https://github.com/SEU_USUARIO/NOME_DO_REPO.git)
-
+   git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git)
 2. Compile o código:
     '''bash
 
